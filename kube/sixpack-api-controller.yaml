@@ -30,4 +30,6 @@ spec:
           value: redis
         - name: SIXPACK_CONFIG_REDIS_PREFIX
           value: sixpack
+      imagePullSecrets:
+      - name: myregistrykey
 EOF
