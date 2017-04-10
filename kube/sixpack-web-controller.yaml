@@ -10,8 +10,8 @@ spec:
     spec:
       containers:
       - name: sixpack-web
-        image: leogamas/sixpack
-        command: ["sixpack.web:start"]
+        image: 'leogamas/sixpack:v0.1'
+        args: ["sixpack.web:start"]
         resources:
           requests:
             memory: "128M"
@@ -20,16 +20,15 @@ spec:
             memory: "256M"
             cpu: "0.5"
         ports:
-        - containerPort: 5000:8000
+        - containerPort: 5000
         env:
         - name: SIXPACK_CONFIG_ENABLED
-          value: true
+          value: 'true'
         - name: SIXPACK_CONFIG_REDIS_PORT
-          value: 6379
+          value: '6379'
         - name: SIXPACK_CONFIG_REDIS_HOST
-          value: redis-sixpack
+          value: 'sixpack-redis'
         - name: SIXPACK_CONFIG_REDIS_PREFIX
-          value: sixpack
+          value: 'sixpack'
       imagePullSecrets:
       - name: myregistrykey
-EOF
