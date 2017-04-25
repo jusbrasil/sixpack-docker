@@ -9,7 +9,7 @@ spec:
         name: sixpack-api
     spec:
       nodeSelector:
-        cloud.google.com/gke-nodepool: default-pool
+        pool: background
       containers:
       - name: sixpack-api
         image: 'leogamas/sixpack:v0.1'
