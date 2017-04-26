@@ -28,7 +28,7 @@ spec:
         - name: SIXPACK_CONFIG_REDIS_PORT
           value: '6379'
         - name: SIXPACK_CONFIG_REDIS_HOST
-          value: 'sixpack-redis'
+          value: 'sixpack-redis-db'
         - name: SIXPACK_CONFIG_REDIS_PREFIX
           value: 'sixpack'
       imagePullSecrets:
