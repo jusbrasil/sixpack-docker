@@ -24,7 +24,7 @@ spec:
         - containerPort: 8000
         env:
         - name: SIXPACK_CONFIG_ENABLED
-          value: 'true'
+          value: 'True'
         - name: SIXPACK_CONFIG_REDIS_PORT
           value: '6379'
         - name: SIXPACK_CONFIG_REDIS_HOST
