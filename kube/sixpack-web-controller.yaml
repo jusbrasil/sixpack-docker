@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: sixpack-web
 spec:
+  selector:
+    matchLabels:
+      name: sizpack-web
   template:
     metadata:
       labels:
