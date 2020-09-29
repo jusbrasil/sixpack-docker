@@ -1,8 +1,11 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sixpack-api
 spec:
+  selector:
+    matchLabels:
+      name: sixpack-api
   template:
     metadata:
       labels:
