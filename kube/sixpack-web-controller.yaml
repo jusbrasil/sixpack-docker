@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: sizpack-web
+      name: sixpack-web
   template:
     metadata:
       labels:
