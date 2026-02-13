@@ -16,7 +16,7 @@ spec:
       containers:
       - name: sixpack-web
         image: 'leogamas/sixpack:v0.1'
-        args: ["sixpack-web"]
+        command: ["sixpack-web"]
         resources:
           requests:
             memory: "128M"

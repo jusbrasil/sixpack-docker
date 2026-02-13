@@ -25,8 +25,8 @@ Build and start all services (API, Web, Redis):
 docker compose up --build
 ```
 
-- **Sixpack API**: http://localhost:5000  
-- **Sixpack Web**: http://localhost:5001  
+- **Sixpack API**: <http://localhost:5000>
+- **Sixpack Web**: <http://localhost:5001>
 - **Redis**: internal only (port 6379)
 
 Run in detached mode (background):
@@ -76,13 +76,9 @@ docker compose down -v
 
 Manifests in `kube/`:
 
-- `sixpack-api-controller.yaml` – Deployment for API (args: `sixpack`)
-- `sixpack-web-controller.yaml` – Deployment for Web (args: `sixpack-web`)
-- `service-sixpack-api.yaml` – Service for API
-- `service-sixpack-web.yaml` – Service for Web
+- `sixpack-api-controller.yaml` – Deployment for API (`command: sixpack`)
+- `sixpack-web-controller.yaml` – Deployment for Web (`command: sixpack-web`)
+- `service-sixpack-api.yaml` – Service for API (port 80 → container `targetPort: 5000`)
+- `service-sixpack-web.yaml` – Service for Web (port 80 → container `targetPort: 5001`)
 
 Deployments use image `leogamas/sixpack:v0.1` and expect a Redis service (e.g. `sixpack-redis-db`).
-
-## License
-
-See the Sixpack project for license information.
