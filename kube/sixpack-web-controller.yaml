@@ -15,7 +15,7 @@ spec:
         pool: background
       containers:
       - name: sixpack-web
-        image: 'leogamas/sixpack:v0.1'
+        image: 'us.gcr.io/jusbrasil-155317/sixpack:v0.1'
         command: ["sixpack-web"]
         resources:
           requests:
@@ -24,7 +24,7 @@ spec:
           limits:
             memory: "256M"
         ports:
-        - containerPort: 8000
+        - containerPort: 5001
         env:
         - name: SIXPACK_CONFIG_ENABLED
           value: 'True'

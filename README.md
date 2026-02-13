@@ -76,9 +76,9 @@ docker compose down -v
 
 Manifests in `kube/`:
 
-- `sixpack-api-controller.yaml` – Deployment for API (`command: sixpack`)
-- `sixpack-web-controller.yaml` – Deployment for Web (`command: sixpack-web`)
+- `sixpack-api-controller.yaml` – Deployment for API (`command: sixpack`, `containerPort: 5000`)
+- `sixpack-web-controller.yaml` – Deployment for Web (`command: sixpack-web`, `containerPort: 5001`)
 - `service-sixpack-api.yaml` – Service for API (port 80 → container `targetPort: 5000`)
 - `service-sixpack-web.yaml` – Service for Web (port 80 → container `targetPort: 5001`)
 
-Deployments use image `leogamas/sixpack:v0.1` and expect a Redis service (e.g. `sixpack-redis-db`).
+Deployments use image `us.gcr.io/jusbrasil-155317/sixpack:v0.1` (Google Container Registry) and expect a Redis service (e.g. `sixpack-redis-db`).
